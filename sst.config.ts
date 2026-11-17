@@ -10,6 +10,8 @@ export default $config({
     };
   },
   async run() {
-    new sst.aws.Nextjs("Dashboard");
+    new sst.aws.Nextjs("Dashboard", {
+      path: "dashboard",
+    });
   },
 });
