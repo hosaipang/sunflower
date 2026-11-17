@@ -19,6 +19,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -33,6 +34,9 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+.env.*
+!.env.example
+!.env*.example
 
 # vercel
 .vercel
@@ -49,3 +53,69 @@ next-env.d.ts
 
 # sst
 .sst
+
+# Testing
+/coverage
+*.lcov
+.nyc_output
+/playwright-report/
+/test-results/
+/blob-report/
+/playwright/.cache/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.pem
+*.key
+*.p12
+*.crt
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+
+# Vercel (if you use it for previews only)
+.vercel
+# --- AWS / deployment ---
+# SST
+.sst/
+# OpenNext (Next.js → Lambda / CloudFront)
+.open-next/
+# AWS CDK
+cdk.out/
+cdk.context.json
+# AWS SAM
+.aws-sam/
+# Serverless Framework
+.serverless/
+# Amplify (Gen 1 local config often has account-specific data)
+amplify/#current-cloud-backend
+amplify/.config/local-*
+amplify/mock-data/
+amplify/mock-api-resources/
+amplify/backend/amplify-meta.json
+amplify/team-provider-info.json
+# Terraform (if infra lives beside the app)
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+# Generic deploy bundles
+*.zip
+!**/public/**/*.zip
+# Pulumi (optional; if you use Pulumi for AWS)
+# .pulumi/
